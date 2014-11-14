@@ -1,14 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
+<%@ taglib tagdir="/WEB-INF/tags" prefix="h" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>JSTL foo bar</title>
-</head>
-<body>
+<h:main title="JSTL Foo Bar">
 
 <c:url var="url" value="/test" >
     <c:param name="Add" value="value1" />
@@ -16,5 +11,4 @@
 
 <p>Value: ${url }</p>
 
-</body>
-</html>
+</h:main>
