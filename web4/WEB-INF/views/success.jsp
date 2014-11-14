@@ -4,10 +4,10 @@
 <%@ taglib tagdir="/WEB-INF/tags" prefix="h" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<h:main title="Spring Sample">
+<h:main title="Form Success">
 
-<p>Timestamp: ${timestamp }</p>
+Success!
 
-<p><a href="<c:url value="/form"></c:url>">Test Form</a></p>
+<a href="<c:url value="/form"/>">Restart</a>
 
 </h:main>

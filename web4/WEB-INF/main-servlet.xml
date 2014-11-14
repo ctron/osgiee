@@ -20,10 +20,12 @@
 	-->
 	
 	<bean class="de.dentrassi.osgiee.web4.WelcomeController"/>
+	<bean class="de.dentrassi.osgiee.web4.FormController"/>
 	
 	<context:annotation-config />
 	
     <mvc:annotation-driven />
+    <mvc:resources mapping="/resources/**" location="/resources/"/>
 	
     <bean id="messageSource"
         class="org.springframework.context.support.ReloadableResourceBundleMessageSource">

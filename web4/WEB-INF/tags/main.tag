@@ -7,6 +7,8 @@
 	<title><%=title %> | OSGi EE with Spring</title>
 	
 	<meta charset="UTF-8">
+	
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/default.css" />
 </head>
 
 <body>
