@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ====================================================================== 
+	 Set up jetty target platform                                                          
+     ====================================================================== -->
+<project name="project" default="default">
+    <description>
+    	Set up jetty target platform
+    </description>
+
+    <!-- ================================= 
+          target: default
+         ================================= -->
+    <target name="default" depends="clean.local,download,unpack,copy">
+    </target>
+
+	<!-- ================================= 
+          target: clean
+         ================================= -->
+    <target name="clean" depends="clean.local">
+    	<delete dir="download"/>
+    </target>
+	
+	<!-- ================================= 
+          target: clean.local
+         ================================= -->
+    <target name="clean.local">
+    	<delete dir="unpack"/>
+    	<delete dir="lib"/>
+    </target>
+
+	<!-- ================================= 
+          target: download
+         ================================= -->
+    <target name="download">
+    	<mkdir dir="download"/>
+    	<get src="http://eclipse.org/downloads/download.php?file=/jetty/stable-9/dist/jetty-distribution-9.2.5.v20141112.tar.gz&amp;r=1" dest="download/jetty-distribution.tar.gz" usetimestamp="true" />
+    	<get src="http://www.eclipse.org/downloads/download.php?file=/equinox/drops/R-LunaSR1-201409250400/equinox-SDK-LunaSR1.zip&amp;r=1" dest="download/equinox-SDK.zip" username="true"/>
+    </target>
+	
+	<!-- ================================= 
+          target: unpack
+         ================================= -->
+    <target name="unpack">
+    	<mkdir dir="unpack/jetty"/>
+    	<mkdir dir="unpack/equinox"/>
+    	
+    	<untar compression="gzip" src="download/jetty-distribution.tar.gz" dest="unpack/jetty">
+    		<cutdirsmapper dirs="1"/>
+    	</untar>
+    	<unzip src="download/equinox-SDK.zip" dest="unpack/equinox"/>
+    </target>
+	
+	<!-- ================================= 
+          target: copy
+         ================================= -->
+    <target name="copy">
+    	<mkdir dir="lib"/>
+    	<copy todir="lib">
+    		<fileset dir="unpack/jetty/lib">
+    			<include name="jetty-util-*.jar"/>
+    			<include name="jetty-http-*.jar"/>
+    			<include name="jetty-io-*.jar"/>
+    			<include name="jetty-security-*.jar"/>
+    			<include name="jetty-server-*.jar"/>
+    			<include name="jetty-servlet-*.jar"/>
+    			<include name="jetty-webapp-*.jar"/>
+				<include name="jetty-deploy-*.jar"/>
+    			<include name="jetty-xml-*.jar"/>
+    			<include name="jetty-osgi-servlet-api-*.jar"/>
+    		</fileset>
+    		<mapper type="flatten" />
+    	</copy>
+    </target>
+
+</project>
