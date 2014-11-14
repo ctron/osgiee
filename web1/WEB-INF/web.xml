@@ -4,7 +4,7 @@
   
   <servlet>
 	<servlet-name>test</servlet-name>
-	<servlet-class>web1.TestServlet</servlet-class>
+	<servlet-class>de.dentrassi.osgiee.web1.TestServlet</servlet-class>
   </servlet>
   
   <servlet-mapping>
