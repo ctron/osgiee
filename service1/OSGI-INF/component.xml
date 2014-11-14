@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="service1">
+   <implementation class="de.dentrassi.osgiee.service1.impl.ServiceImpl"/>
+   <service>
+      <provide interface="de.dentrassi.osgiee.service1.Service"/>
+   </service>
+</scr:component>

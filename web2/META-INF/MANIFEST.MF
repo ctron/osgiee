@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Web2
+Bundle-SymbolicName: web2
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Web-ContextPath: /web2
+Import-Package: de.dentrassi.osgiee.service1;version="1.0.0",
+ javax.servlet;version="3.1.0",
+ javax.servlet.http;version="3.1.0",
+ org.osgi.framework;version="1.8.0",
+ org.osgi.util.tracker;version="1.5.1"
+Bundle-ActivationPolicy: lazy
+Bundle-Activator: de.dentrassi.osgiee.web2.Activator

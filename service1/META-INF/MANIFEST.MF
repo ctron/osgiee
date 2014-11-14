@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Service1
+Bundle-SymbolicName: service1
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Service-Component: OSGI-INF/component.xml
+Export-Package: de.dentrassi.osgiee.service1;version="1.0.0"
