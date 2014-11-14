@@ -14,7 +14,7 @@ First you need to create the target platform:
 * Run the `build.ant` script in the `jetty-9.2.x` folder. This will download the necessary binaries
 * Open the file `jetty.target` and use "Set as Target Platform" (upper right corner) to activate the target platform.
 
-Starting `web1`
+Starting "web1"
 ------------------
 
 * Right click on the file `Jetty9.2.x.launch` and select "Run as" -> "Jetty9.2.x"
