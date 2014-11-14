@@ -18,4 +18,4 @@ Starting "web1"
 ------------------
 
 * Right click on the file `Jetty9.2.x.launch` and select "Run as" -> "Jetty9.2.x"
-* Direct your web browser to http://localhost:8080/web1 (jsp) and http://localhost:8080/web1/test (servlet)
+* Direct your web browser to http://localhost:8080/web1 and http://localhost:8080/web1/test
