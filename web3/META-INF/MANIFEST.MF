@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Web3
+Bundle-SymbolicName: web3
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Web-ContextPath: /web3
+Import-Package: javax.servlet.http;version="3.1.0",
+ org.apache.taglibs.standard.tag.rt.core;version="1.2.0"
