@@ -34,7 +34,38 @@
     <target name="download">
     	<mkdir dir="download"/>
     	<get src="http://eclipse.org/downloads/download.php?file=/jetty/stable-9/dist/jetty-distribution-9.2.5.v20141112.tar.gz&amp;r=1" dest="download/jetty-distribution.tar.gz" usetimestamp="true" />
-    	<get src="http://www.eclipse.org/downloads/download.php?file=/equinox/drops/R-LunaSR1-201409250400/equinox-SDK-LunaSR1.zip&amp;r=1" dest="download/equinox-SDK.zip" username="true"/>
+    	<get src="http://www.eclipse.org/downloads/download.php?file=/equinox/drops/S-MarsM3-201410292000/equinox-SDK-MarsM3.zip&amp;r=1" dest="download/equinox-SDK.zip" usetimestamp="true"/>
+    	
+    	<mkdir dir="download/bundles"/>
+    	
+    	<parallel>
+    	
+    	<get src="http://central.maven.org/maven2/org/eclipse/jetty/osgi/jetty-osgi-boot/9.2.5.v20141112/jetty-osgi-boot-9.2.5.v20141112.jar" dest="download/bundles" usetimestamp="true"/>
+    	<get src="http://download.eclipse.org/tools/orbit/downloads/drops/R20140525021250/repository/plugins/ch.qos.logback.classic_1.0.7.v20121108-1250.jar" dest="download/bundles" usetimestamp="true"/>
+    	<get src="http://download.eclipse.org/tools/orbit/downloads/drops/R20140525021250/repository/plugins/ch.qos.logback.core_1.0.7.v20121108-1250.jar" dest="download/bundles" usetimestamp="true"/>
+    	<get src="http://download.eclipse.org/tools/orbit/downloads/drops/R20140525021250/repository/plugins/ch.qos.logback.slf4j_1.0.7.v20121108-1250.jar" dest="download/bundles" usetimestamp="true"/>
+    	
+    	<!-- annotation stuff -->
+    	
+    	<get src="http://download.eclipse.org/tools/orbit/downloads/drops/R20140525021250/repository/plugins/javax.mail.glassfish_1.4.1.v201108011116.jar" dest="download/bundles" usetimestamp="true"/>
+    	<get src="http://download.eclipse.org/tools/orbit/downloads/drops/R20140525021250/repository/plugins/javax.transaction_1.1.1.v201105210645.jar" dest="download/bundles" usetimestamp="true"/>
+    	<get src="http://central.maven.org/maven2/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.jar" dest="download/bundles" usetimestamp="true"/>
+    	<get src="http://central.maven.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.dynamic.bundle/1.0.1/org.apache.aries.spifly.dynamic.bundle-1.0.1.jar" dest="download/bundles" usetimestamp="true"/>
+    	<get src="http://central.maven.org/maven2/org/apache/aries/org.apache.aries.util/1.1.0/org.apache.aries.util-1.1.0.jar" dest="download/bundles" usetimestamp="true"/>
+    	<get src="http://repo1.maven.org/maven2/org/ow2/asm/asm-tree/5.0.1/asm-tree-5.0.1.jar" dest="download/bundles" usetimestamp="true"/>
+    	<get src="http://repo1.maven.org/maven2/org/ow2/asm/asm-commons/5.0.1/asm-commons-5.0.1.jar" dest="download/bundles" usetimestamp="true"/>
+    	<get src="http://repo1.maven.org/maven2/org/ow2/asm/asm/5.0.1/asm-5.0.1.jar" dest="download/bundles" usetimestamp="true"/>
+    		
+		<get src="http://download.eclipse.org/tools/orbit/downloads/drops/R20140525021250/repository/plugins/javax.activation_1.1.0.v201211130549.jar" dest="download/bundles" usetimestamp="true"/>
+    		
+		<!-- jsp stuff -->
+
+		<get src="http://repo1.maven.org/maven2/org/eclipse/jetty/osgi/jetty-osgi-boot-jsp/9.2.5.v20141112/jetty-osgi-boot-jsp-9.2.5.v20141112.jar" dest="download/bundles" usetimestamp="true"/>
+    	<get src="http://download.eclipse.org/tools/orbit/downloads/drops/R20140525021250/repository/plugins/org.apache.xalan_2.7.1.v201005080400.jar" dest="download/bundles" usetimestamp="true"/>
+		<get src="http://download.eclipse.org/tools/orbit/downloads/drops/R20140525021250/repository/plugins/org.apache.xml.serializer_2.7.1.v201005080400.jar" dest="download/bundles" usetimestamp="true"/>
+    		
+		</parallel>
+    	
     </target>
 	
 	<!-- ================================= 
@@ -67,7 +98,56 @@
 				<include name="jetty-deploy-*.jar"/>
     			<include name="jetty-xml-*.jar"/>
     			<include name="jetty-osgi-servlet-api-*.jar"/>
+    			
+    			<include name="servlet-api-3.1.jar"/>
+    			<include name="jetty-schemas-3.1.jar"/>
+    			
+    			<!-- annotation -->
+    			
+    			<include name="jetty-jndi-*.jar"/>
+    			<include name="jetty-plus-*.jar"/>
+    			<include name="jetty-annotations-*.jar"/>
+    			
+    			<!-- jsp -->
+    			
+    			<include name="apache-jsp/*.jar"/>
+    			<include name="apache-jstl/*.jar"/>
+    			<!--
+    			<include name="jsp/org.eclipse.jetty.orbit.javax.servlet.jsp.jstl-*.jar"/>
+    			<include name="jsp/javax.servlet.jsp.jstl-*.jar"/>
+    			-->
+    		
     		</fileset>
+    		
+    		<fileset dir="unpack/equinox/plugins">
+    			
+    			<include name="org.apache.felix.gogo.command_*.jar"/>
+    			<include name="org.apache.felix.gogo.runtime_*.jar"/>
+    			<include name="org.apache.felix.gogo.shell_*.jar"/>
+    			
+    			<include name="org.eclipse.equinox.cm_*.jar"/>
+    			<include name="org.eclipse.equinox.common_*.jar"/>
+    			<include name="org.eclipse.equinox.console_*.jar"/>
+    			<include name="org.eclipse.equinox.ds_*.jar"/>
+    			<include name="org.eclipse.equinox.event_*.jar"/>
+    			<include name="org.eclipse.equinox.supplement_*.jar"/>
+    			<include name="org.eclipse.equinox.util_*.jar"/>
+    			
+    			<include name="org.eclipse.osgi_*.jar"/>
+    			<include name="org.eclipse.osgi.services_*.jar"/>
+    			<include name="org.eclipse.osgi.util_*.jar"/>
+    			<include name="org.slf4j.api_*.jar"/>
+    			
+    			<!--
+    			<include name="javax.servlet_*.jar"/>
+    			-->
+    			
+    			<!-- annotation -->
+    			
+    		</fileset>
+    		
+    		<fileset dir="download/bundles"/>
+    		
     		<mapper type="flatten" />
     	</copy>
     </target>
