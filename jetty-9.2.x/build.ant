@@ -11,6 +11,7 @@
           target: default
          ================================= -->
     <target name="default" depends="clean.local,download,unpack,copy">
+    	<ant dir="../web4" antfile="build.ant" />
     </target>
 
 	<!-- ================================= 

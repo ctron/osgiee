@@ -3,6 +3,11 @@ Spring WebMVC
 
 This example is a simple Spring WebMVC example. Based on Spring 4.1.x.
 
+Preparing
+-----------
+
+In order to download spring, the `build.ant` script must be executed at least once.
+
 Adding Spring
 ----------------
 
