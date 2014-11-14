@@ -60,8 +60,8 @@
     		
 		<!-- jsp stuff -->
 
-    	<get src="http://download.eclipse.org/tools/orbit/downloads/drops/R20140525021250/repository/plugins/org.apache.xalan_2.7.1.v201005080400.jar" dest="download/bundles" usetimestamp="true"/>
 		<get src="http://repo1.maven.org/maven2/org/eclipse/jetty/osgi/jetty-osgi-boot-jsp/9.2.5.v20141112/jetty-osgi-boot-jsp-9.2.5.v20141112.jar" dest="download/bundles" usetimestamp="true"/>
+    	<get src="http://download.eclipse.org/tools/orbit/downloads/drops/R20140525021250/repository/plugins/org.apache.xalan_2.7.1.v201005080400.jar" dest="download/bundles" usetimestamp="true"/>
 		<get src="http://download.eclipse.org/tools/orbit/downloads/drops/R20140525021250/repository/plugins/org.apache.xml.serializer_2.7.1.v201005080400.jar" dest="download/bundles" usetimestamp="true"/>
     		
 		</parallel>
