@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================
+     Fetch spring
+     ====================================================================== -->
+<project name="project" default="default">
+    <description>
+    	Fetch spring
+    </description>
+
+	<property name="version" value="4.1.2.RELEASE"/>
+	
+    <!-- ================================= 
+          target: default
+         ================================= -->
+    <target name="default">
+    	<get src="https://repo1.maven.org/maven2/org/springframework/spring-context/${version}/spring-context-${version}.jar" dest="WEB-INF/lib" usetimestamp="true"/>
+		<get src="https://repo1.maven.org/maven2/org/springframework/spring-beans/${version}/spring-beans-${version}.jar" dest="WEB-INF/lib" usetimestamp="true"/>
+    	<get src="https://repo1.maven.org/maven2/org/springframework/spring-core/${version}/spring-core-${version}.jar" dest="WEB-INF/lib" usetimestamp="true"/>
+    	<get src="https://repo1.maven.org/maven2/org/springframework/spring-expression/${version}/spring-expression-${version}.jar" dest="WEB-INF/lib" usetimestamp="true"/>
+    	<get src="https://repo1.maven.org/maven2/org/springframework/spring-aop/${version}/spring-aop-${version}.jar" dest="WEB-INF/lib" usetimestamp="true"/>
+    	<get src="https://repo1.maven.org/maven2/org/springframework/spring-web/${version}/spring-web-${version}.jar" dest="WEB-INF/lib" usetimestamp="true"/>
+    	<get src="https://repo1.maven.org/maven2/org/springframework/spring-webmvc/${version}/spring-webmvc-${version}.jar" dest="WEB-INF/lib" usetimestamp="true"/>
+    </target>
+
+</project>
