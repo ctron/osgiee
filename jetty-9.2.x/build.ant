@@ -88,6 +88,7 @@
     	<mkdir dir="lib"/>
     	<copy todir="lib">
     		<fileset dir="unpack/jetty/lib">
+    			
     			<include name="jetty-util-*.jar"/>
     			<include name="jetty-http-*.jar"/>
     			<include name="jetty-io-*.jar"/>
@@ -112,10 +113,7 @@
     			
     			<include name="apache-jsp/*.jar"/>
     			<include name="apache-jstl/*.jar"/>
-    			<!--
-    			<include name="jsp/org.eclipse.jetty.orbit.javax.servlet.jsp.jstl-*.jar"/>
-    			<include name="jsp/javax.servlet.jsp.jstl-*.jar"/>
-    			-->
+
     		
     		</fileset>
     		
@@ -137,12 +135,6 @@
     			<include name="org.eclipse.osgi.services_*.jar"/>
     			<include name="org.eclipse.osgi.util_*.jar"/>
     			<include name="org.slf4j.api_*.jar"/>
-    			
-    			<!--
-    			<include name="javax.servlet_*.jar"/>
-    			-->
-    			
-    			<!-- annotation -->
     			
     		</fileset>
     		
