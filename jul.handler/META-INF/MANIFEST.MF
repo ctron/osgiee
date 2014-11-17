@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Handler
+Bundle-SymbolicName: jul.handler
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-Activator: de.dentrassi.osgiee.jul.handler.Activator
+Import-Package: org.osgi.framework
+Require-Bundle: org.slf4j.jul;bundle-version="1.7.2"
