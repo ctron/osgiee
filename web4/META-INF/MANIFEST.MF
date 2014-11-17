@@ -16,7 +16,6 @@ Bundle-ClassPath: WEB-INF/lib/spring-aop-4.1.2.RELEASE.jar,
  WEB-INF/lib/validation-api-1.1.0.Final.jar,
  .
 Web-ContextPath: /web4
-Jetty-WarResourcePath: .
 Import-Package: com.fasterxml.classmate;version="1.0.0",
  com.fasterxml.classmate.members;version="1.0.0",
  com.fasterxml.classmate.types;version="1.0.0",
