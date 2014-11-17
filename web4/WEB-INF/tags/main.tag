@@ -19,7 +19,7 @@
 
 <section>
 
-<div id="content" class="content pure-u-1">
+<div id="content">
 <jsp:doBody/>
 </div>
 
