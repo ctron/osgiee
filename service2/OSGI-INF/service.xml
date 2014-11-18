@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" immediate="true" name="de.dentrassi.osgiee.service2">
+   <implementation class="de.dentrassi.osgiee.service2.impl.BookServiceImpl"/>
+   <reference bind="setEntityManagerFactory" cardinality="1..1" interface="javax.persistence.EntityManagerFactory" name="EntityManagerFactory" policy="static" target="(osgi.unit.name=jpa1)"/>
+   <service>
+      <provide interface="de.dentrassi.osgiee.service2.BookService"/>
+   </service>
+</scr:component>

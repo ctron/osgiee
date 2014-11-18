@@ -6,3 +6,5 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Import-Package: javax.persistence;version="2.0.0",
  javax.persistence.metamodel;version="2.0.0"
+Meta-Persistence: META-INF/persistence.xml
+Export-Package: de.dentrassi.osgiee.jpa1;version="1.0.0"

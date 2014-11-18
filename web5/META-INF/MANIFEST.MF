@@ -1,8 +1,9 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Web Sample 4 - Spring WebMV, Hibernate Validation
-Bundle-SymbolicName: web4
+Bundle-Name: Web Sample 5 - SpringWebMV, JPA
+Bundle-SymbolicName: web5
 Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Jens Reimann
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ClassPath: WEB-INF/lib/spring-aop-4.1.2.RELEASE.jar,
  WEB-INF/lib/spring-beans-4.1.2.RELEASE.jar,
@@ -15,15 +16,22 @@ Bundle-ClassPath: WEB-INF/lib/spring-aop-4.1.2.RELEASE.jar,
  WEB-INF/lib/hibernate-validator-annotation-processor-5.1.3.Final.jar,
  WEB-INF/lib/validation-api-1.1.0.Final.jar,
  .
-Web-ContextPath: /web4
+Web-ContextPath: /web5
 Import-Package: com.fasterxml.classmate;version="1.0.0",
  com.fasterxml.classmate.members;version="1.0.0",
  com.fasterxml.classmate.types;version="1.0.0",
+ de.dentrassi.osgiee.jpa1;version="1.0.0",
+ de.dentrassi.osgiee.service2;version="1.0.0",
  javax.el;version="3.0.0",
  javax.servlet;version="3.1.0",
  javax.servlet.http;version="3.1.0",
  javax.servlet.jsp;version="2.3.0",
  javax.servlet.jsp.tagext;version="2.3.0",
  org.apache.commons.logging;version="1.1.1",
- org.jboss.logging;version="3.1.3"
+ org.jboss.logging;version="3.1.3",
+ org.osgi.framework;version="1.8.0",
+ org.osgi.service.cm;version="1.5.0",
+ org.osgi.service.jdbc;version="1.0.0",
+ org.osgi.util.tracker;version="1.5.1"
 Require-Bundle: org.apache.taglibs.standard-impl;bundle-version="1.2.1"
+Bundle-Activator: de.dentrassi.osgiee.web5.internal.Activator

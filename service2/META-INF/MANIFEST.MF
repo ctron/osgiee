@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Service2
+Bundle-SymbolicName: service2
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Jens Reimann
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Import-Package: de.dentrassi.osgiee.jpa1;version="1.0.0",
+ javax.persistence;version="2.0.0",
+ javax.persistence.criteria;version="2.0.5"
+Export-Package: de.dentrassi.osgiee.service2;version="1.0.0"
+Bundle-ActivationPolicy: lazy
+Service-Component: OSGI-INF/service.xml

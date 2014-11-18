@@ -3,7 +3,7 @@ package de.dentrassi.osgiee.jpa1;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-@Entity
+@Entity ( name = "BOOKS" )
 public class Book
 {
     @Id
