@@ -4,7 +4,6 @@ Bundle-Name: Web Sample 1 - JSP, Servlet
 Bundle-SymbolicName: web1
 Bundle-Version: 1.0.0.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
-Bundle-ClassPath: WEB-INF/classes/
 Import-Package: javax.servlet;version="3.1.0",
  javax.servlet.http;version="3.1.0"
 Web-ContextPath: /web1
