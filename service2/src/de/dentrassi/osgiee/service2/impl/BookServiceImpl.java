@@ -1,3 +1,13 @@
+/*******************************************************************************
+ * Copyright (c) 2014 Jens Reimann.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *     Jens Reimann - initial API and implementation
+ *******************************************************************************/
 package de.dentrassi.osgiee.service2.impl;
 
 import java.util.List;
@@ -14,7 +24,7 @@ public class BookServiceImpl extends AbstractJpaServiceImpl implements BookServi
     @Override
     public Book get ( final long bookId )
     {
-        return doWithManager ( new ManagerFunction<Book> () {
+        return doWithTransaction ( new ManagerFunction<Book> () {
 
             @Override
             public Book process ( final EntityManager entityManager )
@@ -29,7 +39,7 @@ public class BookServiceImpl extends AbstractJpaServiceImpl implements BookServi
     @Override
     public void persist ( final Book book )
     {
-        doWithManager ( new ManagerFunction<Void> () {
+        doWithTransaction ( new ManagerFunction<Void> () {
 
             @Override
             public Void process ( final EntityManager entityManager )
@@ -44,7 +54,7 @@ public class BookServiceImpl extends AbstractJpaServiceImpl implements BookServi
     @Override
     public void delete ( final long bookId )
     {
-        doWithManager ( new ManagerFunction<Void> () {
+        doWithTransaction ( new ManagerFunction<Void> () {
 
             @Override
             public Void process ( final EntityManager entityManager )
@@ -58,7 +68,7 @@ public class BookServiceImpl extends AbstractJpaServiceImpl implements BookServi
     @Override
     public List<Book> listAll ()
     {
-        return doWithManager ( new ManagerFunction<List<Book>> () {
+        return doWithTransaction ( new ManagerFunction<List<Book>> () {
 
             @Override
             public List<Book> process ( final EntityManager entityManager )
