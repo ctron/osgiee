@@ -4,6 +4,8 @@
 		<class>de.dentrassi.osgiee.jpa1.Book</class>
 		<properties>
 			<property name="eclipselink.weaving" value="false"/>
+			<property name="eclipselink.ddl-generation.output-mode" value="database"/>
+			<property name="eclipselink.ddl-generation" value="create-tables"/>
 		</properties>
 	</persistence-unit>
 </persistence>
